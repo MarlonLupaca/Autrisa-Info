@@ -213,7 +213,7 @@ const StepModal = ({ isOpen, onClose, stepData }) => {
                 key={index}
                 onClick={() => setSelectedAnswer(index)}
                 disabled={selectedAnswer !== null}
-                className={`p-6 rounded-2xl transition-all transform hover:scale-105 cursor-pointer ${
+                className={`py-6 px-2 text-[13px] rounded-2xl transition-all transform hover:scale-105 cursor-pointer ${
                   selectedAnswer === null
                     ? ' hover:bg-blue-100 border-2 border-mainAutrisa'
                     : selectedAnswer === index
@@ -274,7 +274,7 @@ const StepModal = ({ isOpen, onClose, stepData }) => {
                     className="absolute inset-0 bg-emerald-500 rounded-2xl p-6 flex items-center justify-center  text-white"
                     style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}
                   >
-                    <p className="text-center font-semibold text-[20px]">{card.desc}</p>
+                    <p className="text-center font-semibold text-[15px]">{card.desc}</p>
                   </div>
                 </div>
               </div>
