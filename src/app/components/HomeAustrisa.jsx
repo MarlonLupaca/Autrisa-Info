@@ -73,7 +73,7 @@ const HomeAustrisa = () => {
         </div>
 
         {/* PASO 3 */}
-        <div className="w-full flex z-10 pl-[25vw] pr-[8vw] mt-[105px] xs:mt-[120px] xs1:mt-[150px] lg:mt-[230px]">
+        <div className="w-full flex z-10 pl-[25vw] pr-[8vw] mt-[120px] xs:mt-[130px] xs1:mt-[150px] lg:mt-[230px]">
           <div
             className="relative pt-10 flex flex-col justify-center items-center h-[200px] xs:h-[220px] xs1:h-[240px]
             xs2:h-[300px] sm:h-[370px] md:h-[440px] lg:h-[500px] w-full"
