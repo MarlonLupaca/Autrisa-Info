@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Carretera from './Carretera';
 import Image from 'next/image';
 import StepModal from './StepModal';
-import { stepsData } from './stepsData'; // ✅ nueva importación
+import { stepsData } from './stepsData';
 
 const HomeAustrisa = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,7 +21,7 @@ const HomeAustrisa = () => {
 
   return (
     <>
-      <div className="text-black w-full flex flex-col items-center justify-center mt-20 relative py-5">
+      <div className="text-black w-full flex flex-col items-center justify-center relative py-5 ">
         <Carretera />
 
         {/* PASO 1 */}
@@ -49,7 +49,7 @@ const HomeAustrisa = () => {
         </div>
 
         {/* PASO 2 */}
-        <div className="w-full flex z-10 pl-[8vw] pr-[25vw] mt-[100px] xs:mt-[120px] xs1:mt-[150px] lg:mt-[210px]">
+        <div className="w-full flex z-10 pl-2 pr-[25vw] mt-[70px] xs:mt-[80px] xs1:mt-[150px] lg:mt-[210px]">
           <div
             className="relative pt-10 flex flex-col justify-center items-center h-[200px] xs:h-[220px] xs1:h-[240px]
             xs2:h-[300px] sm:h-[370px] md:h-[440px] lg:h-[500px] w-full"
@@ -73,7 +73,7 @@ const HomeAustrisa = () => {
         </div>
 
         {/* PASO 3 */}
-        <div className="w-full flex z-10 pl-[25vw] pr-[8vw] mt-[130px] xs:mt-[130px] xs1:mt-[150px] lg:mt-[230px]">
+        <div className="w-full flex z-10 pl-[25vw] pr-[8vw] mt-[105px] xs:mt-[120px] xs1:mt-[150px] lg:mt-[230px]">
           <div
             className="relative pt-10 flex flex-col justify-center items-center h-[200px] xs:h-[220px] xs1:h-[240px]
             xs2:h-[300px] sm:h-[370px] md:h-[440px] lg:h-[500px] w-full"

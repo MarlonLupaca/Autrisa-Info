@@ -31,6 +31,14 @@ const StepModal = ({ isOpen, onClose, stepData }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+
+      // Cargar canvas-confetti desde CDN
+      if (!window.confetti) {
+        const script = document.createElement('script');
+        script.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js';
+        script.async = true;
+        document.body.appendChild(script);
+      }
     } else {
       document.body.style.overflow = '';
     }
@@ -85,6 +93,61 @@ const StepModal = ({ isOpen, onClose, stepData }) => {
     setSelectedAnswer(null);
     setDraggedItems([]);
     onClose();
+  };
+
+  // 🎉 Función para lanzar confeti
+  const launchConfetti = () => {
+    if (window.confetti) {
+      const count = 200;
+      const defaults = {
+        origin: { y: 0.7 },
+      };
+
+      function fire(particleRatio, opts) {
+        window.confetti({
+          ...defaults,
+          ...opts,
+          particleCount: Math.floor(count * particleRatio),
+          spread: 26,
+          startVelocity: 55,
+        });
+      }
+
+      fire(0.25, {
+        spread: 26,
+        startVelocity: 55,
+      });
+
+      fire(0.2, {
+        spread: 60,
+      });
+
+      fire(0.35, {
+        spread: 100,
+        decay: 0.91,
+        scalar: 0.8,
+      });
+
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 25,
+        decay: 0.92,
+        scalar: 1.2,
+      });
+
+      fire(0.1, {
+        spread: 120,
+        startVelocity: 45,
+      });
+    }
+  };
+
+  // 🎊 Efecto para lanzar confeti al completar
+  const handleComplete = () => {
+    launchConfetti();
+    setTimeout(() => {
+      handleClose();
+    }, 2000); // Espera 2 segundos antes de cerrar
   };
 
   const currentContent = stepData.subSteps[currentSubStep];
@@ -348,8 +411,8 @@ const StepModal = ({ isOpen, onClose, stepData }) => {
 
           {currentSubStep === stepData.subSteps.length - 1 ? (
             <button
-              onClick={handleClose}
-              className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all bg-emerald-500 text-white hover:shadow-lg"
+              onClick={handleComplete}
+              className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all bg-emerald-500 text-white hover:shadow-lg hover:scale-105 cursor-pointer"
             >
               ¡Completado! ✓
             </button>

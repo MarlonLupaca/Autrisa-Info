@@ -1,11 +1,11 @@
 import HeaderAustrisa from './components/HeaderAustrisa';
-import HomeAustrisa from './components/HomeAustrisa';
+import MainHome from './components/MainHome';
 
 export default function Home() {
   return (
-    <div className="text-white bg-white">
+    <div className="text-white">
       <HeaderAustrisa />
-      <HomeAustrisa />
+      <MainHome />
     </div>
   );
 }

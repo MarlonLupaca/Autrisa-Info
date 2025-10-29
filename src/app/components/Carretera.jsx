@@ -3,7 +3,7 @@ import React from 'react';
 const Carretera = () => {
   return (
     <div className="w-full absolute z-0 top-0 py-5">
-      <svg className="m-auto max-w-[900px]" viewBox="0 0 600 1300" preserveAspectRatio="xMidYMid meet">
+      <svg className="m-auto max-w-[900px]" viewBox="0 0 600 1400" preserveAspectRatio="xMidYMid meet">
         <defs>
           <style>
             {`
@@ -29,7 +29,7 @@ const Carretera = () => {
               L 500 750
               Q 500 900, 300 900
               Q 100 900, 100 1050
-              L 100 1250
+              L 100 1350
             "
           fill="none"
           stroke="#01156b"
@@ -49,7 +49,7 @@ const Carretera = () => {
               L 500 750
               Q 500 900, 300 900
               Q 100 900, 100 1050
-              L 100 1250
+              L 100 1350
             "
           fill="none"
           stroke="white"

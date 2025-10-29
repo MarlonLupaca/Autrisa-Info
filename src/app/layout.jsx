@@ -18,8 +18,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className="bg-white">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white`}>{children}</body>
+    <html lang="es" className="bg-[url('/plus.svg')] bg-no-repeat bg-cover bg-center">
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
     </html>
   );
 }
