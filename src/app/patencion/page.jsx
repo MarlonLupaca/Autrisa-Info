@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
+import { Download } from 'lucide-react';
 import HeaderAustrisa from '../components/HeaderAustrisa';
 import HomeAustrisa from './HomeAustrisa';
-import PDFViewer from '../components/PDFViewer';
 
 export default function AboutPage() {
   const [showPDF, setShowPDF] = useState(false);
@@ -54,27 +54,47 @@ export default function AboutPage() {
 
       {showPDF && (
         <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-2 sm:p-4"
           onClick={() => setShowPDF(false)}
         >
           <div
-            className="bg-white rounded-lg w-full max-w-7xl h-[90vh] flex flex-col shadow-2xl"
+            className="bg-white rounded-lg w-full max-w-7xl h-[90vh] sm:h-[92vh] flex flex-col shadow-2xl relative"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between p-3 sm:p-4 border-b border-gray-200 h-[10%]">
+            {/* Cabecera */}
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-gray-200 bg-white sticky top-0 z-10">
               <h3 className="text-base sm:text-xl font-bold text-mainAutrisa">
                 Documentación - Procesos Identificados
               </h3>
-              <button
-                onClick={() => setShowPDF(false)}
-                className="text-gray-500 hover:text-gray-700 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors flex-shrink-0"
-              >
-                ×
-              </button>
+
+              <div className="flex items-center gap-3">
+                {/* Botón de descarga */}
+                <a
+                  href="/docs/Procesos_Identificados.pdf"
+                  download
+                  className="flex items-center gap-2 px-3 py-1.5 text-gray-500 rounded-md hover:bg-gray-100 transition-colors"
+                >
+                  <Download className="w-5 h-5" />
+                  <span className="hidden sm:inline text-sm font-medium">Descargar</span>
+                </a>
+
+                {/* Cerrar */}
+                <button
+                  onClick={() => setShowPDF(false)}
+                  className="text-gray-500 hover:text-gray-700 text-2xl font-bold w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors flex-shrink-0"
+                >
+                  ×
+                </button>
+              </div>
             </div>
 
-            <div className="h-[90%] overflow-auto">
-              <PDFViewer fileUrl="/docs/Procesos_Identificados.pdf" />
+            {/* PDF Viewer */}
+            <div className="flex-1 overflow-hidden">
+              <iframe
+                src="/docs/Procesos_Identificados.pdf"
+                className="w-full h-full rounded-b-lg"
+                title="Documento PDF"
+              />
             </div>
           </div>
         </div>
@@ -82,14 +102,14 @@ export default function AboutPage() {
 
       {showVideo && (
         <div
-          className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-2 sm:p-4"
           onClick={() => setShowVideo(false)}
         >
           <div
             className="bg-white rounded-lg w-full max-w-5xl flex flex-col shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between p-3 sm:p-4 border-b border-gray-200">
+            <div className="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-gray-200">
               <h3 className="text-base sm:text-xl font-bold text-mainAutrisa">Video Tutorial - Proceso de Atención</h3>
               <button
                 onClick={() => setShowVideo(false)}
@@ -99,7 +119,7 @@ export default function AboutPage() {
               </button>
             </div>
 
-            <div className="relative w-full bg-black" style={{ paddingBottom: '56.25%' }}>
+            <div className="relative w-full bg-black aspect-video">
               <iframe
                 className="absolute top-0 left-0 w-full h-full"
                 src="https://www.youtube.com/embed/mtwjm7x1sUc"
