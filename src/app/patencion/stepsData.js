@@ -24,17 +24,23 @@ import {
 
 export const stepsData = {
   1: {
-    title: 'Recibe y Confirma Solicitud (I-13-02)',
+    title: 'Paso 1: Recibir y Confirmar la Solicitud (I-13-02)',
     subSteps: [
       {
         type: 'visual-checklist',
         content: {
-          icon: <HandMetal className="w-16 h-16 mx-auto text-mainAutrisa animate-bounce" />,
-          intro: 'Pasos iniciales del Grifero:',
+          icon: <HandMetal className="w-12 h-12 mx-auto text-mainAutrisa animate-bounce" />,
+          intro: 'Tus pasos iniciales como Grifero:',
           items: [
-            { icon: <Smile className="w-12 h-12" />, text: 'Recibe al Cliente / Saluda y Pregunta Solicitud.' },
-            { icon: <Key className="w-12 h-12" />, text: 'Solicita Llave / Confirma Seguridad y Datos.' },
-            { icon: <CreditCard className="w-12 h-12" />, text: 'Pregunta Forma de Pago / Verifica Conformidad.' },
+            { icon: <Smile className="w-12 h-12" />, text: 'Recibir al cliente: Saludar y preguntar qué necesita.' },
+            {
+              icon: <Key className="w-12 h-12" />,
+              text: 'Solicitar la llave: Confirmar seguridad y datos del vehículo.',
+            },
+            {
+              icon: <CreditCard className="w-12 h-12" />,
+              text: 'Preguntar forma de pago: Verificar la conformidad del cliente.',
+            },
           ],
         },
       },
@@ -42,87 +48,99 @@ export const stepsData = {
         type: 'visual-quiz',
         content: {
           icon: <Target className="w-20 h-20 mx-auto text-mainAutrisa" />,
-          question: '¿Cuál es el primer paso del Grifero al recibir al cliente según I-13-02?',
+
+          question: 'Según el instructivo I-13-02, ¿qué es lo primero que debes hacer al recibir a un cliente?',
           options: [
             {
               icon: <MessageCircle className="w-10 h-10" />,
               text: 'Preguntar la forma de pago.',
               correct: false,
-              feedback: 'Esa es la tercera acción, no la primera.',
+
+              feedback: 'Casi, pero no. Esta es la tercera acción, no la primera.',
             },
             {
               icon: <Smile className="w-10 h-10" />,
-              text: 'Recibir, Saludar y Preguntar Solicitud.',
+              text: 'Recibirlo, saludarlo y preguntarle qué necesita.',
               correct: true,
-              feedback: '¡Correcto! Es el inicio del servicio.',
+              feedback: '¡Correcto! Así se inicia un buen servicio.',
             },
             {
               icon: <Key className="w-10 h-10" />,
               text: 'Solicitar la llave y confirmar datos.',
               correct: false,
-              feedback: 'Esta es la segunda acción.',
+              feedback: 'Estás cerca. Esta es la segunda acción, justo después de saludar.',
             },
           ],
-          explanation: 'El flujograma indica que el Grifero Recibe/Saluda/Pregunta Solicitud como primer paso.',
+
+          explanation:
+            'El flujograma I-13-02 indica que tu primer paso es siempre Recibir, Saludar y Preguntar la solicitud al cliente.',
         },
       },
       {
         type: 'drag-drop',
         content: {
-          question: 'Orden de las primeras acciones del Grifero según I-13-02:',
+          question: 'Ordena las primeras acciones que debes realizar (según I-13-02):',
           options: [
-            'Pregunta Forma de Pago / Verifica Conformidad',
-            'Recibe al Cliente / Saluda y Pregunta Solicitud',
-            'Solicita Llave / Confirma Seguridad y Datos',
+            'Preguntar la forma de pago y verificar conformidad',
+            'Recibir al cliente, saludar y preguntar qué necesita',
+            'Solicitar la llave y confirmar datos de seguridad',
           ],
           correctOrder: [
-            'Recibe al Cliente / Saluda y Pregunta Solicitud',
-            'Solicita Llave / Confirma Seguridad y Datos',
-            'Pregunta Forma de Pago / Verifica Conformidad',
+            'Recibir al cliente, saludar y preguntar qué necesita',
+            'Solicitar la llave y confirmar datos de seguridad',
+            'Preguntar la forma de pago y verificar conformidad',
           ],
-          win: 'Sabes el flujo perfecto de recepción y solicitud de datos.',
+
+          win: '¡Excelente! Sabes perfectamente cómo recibir al cliente y solicitar los datos.',
         },
       },
       {
         type: 'flip-cards',
         content: {
           icon: <BookOpen className="w-16 h-16 mx-auto text-mainAutrisa" />,
-          intro: 'Puntos clave en la recepción:',
+          intro: 'Puntos clave para recordar en la recepción:',
           cards: [
             {
               icon: <Users className="w-12 h-12" />,
               title: 'Cliente',
-              desc: 'El cliente Solicita Combustible / Confirma Datos.',
+
+              desc: 'El cliente es quien te solicita el combustible y confirma los datos que le pides.',
             },
             {
               icon: <Key className="w-12 h-12" />,
               title: 'Llave',
-              desc: 'Pedir la llave del tanque es un paso de seguridad y confirmación.',
+              desc: 'Pedir la llave del tanque es un paso clave de seguridad y confirmación.',
             },
             {
               icon: <CreditCard className="w-12 h-12" />,
               title: 'Pago',
-              desc: 'Confirmar la forma de pago (efectivo, tarjeta, etc.) antes de despachar.',
+              desc: 'Siempre confirma la forma de pago (efectivo, tarjeta, etc.) antes de empezar a despachar.',
             },
           ],
-          tip: 'Voltea las tarjetas para reforzar la información.',
+          tip: 'Voltea las tarjetas para repasar y reforzar esta información.',
         },
       },
     ],
   },
 
   2: {
-    title: 'Despacha Combustible (I-13-02)',
+    title: 'Paso 2: Despachar Combustible (I-13-02)',
     subSteps: [
       {
         type: 'visual-checklist',
         content: {
           icon: <Fuel className="w-16 h-16 mx-auto text-mainAutrisa animate-bounce" />,
-          intro: 'Acciones de despacho y finalización del Grifero:',
+          intro: 'Tus acciones durante el despacho y el cierre de la carga:',
           items: [
-            { icon: <Fuel className="w-12 h-12" />, text: 'Despacha Combustible y Vigila Derrames.' },
-            { icon: <Droplet className="w-12 h-12" />, text: 'Termina Despacho / Espera Goteo.' },
-            { icon: <Key className="w-12 h-12" />, text: 'Coloca Tapa / Devuelve Llave / Pregunta Comprobante.' },
+            {
+              icon: <Fuel className="w-12 h-12" />,
+              text: 'Despachar combustible vigilando siempre posibles derrames.',
+            },
+            { icon: <Droplet className="w-12 h-12" />, text: 'Terminar el despacho y esperar que termine el goteo.' },
+            {
+              icon: <Key className="w-12 h-12" />,
+              text: 'Colocar la tapa, devolver la llave y preguntar por el comprobante.',
+            },
           ],
         },
       },
@@ -130,87 +148,87 @@ export const stepsData = {
         type: 'visual-quiz',
         content: {
           icon: <ShieldCheck className="w-20 h-20 mx-auto text-mainAutrisa" />,
-          question: '¿Cuál es la acción inmediata después de terminar el despacho?',
+          question: 'Justo después de que la pistola de combustible se detiene, ¿qué debes hacer inmediatamente?',
           options: [
             {
               icon: <Sparkles className="w-10 h-10" />,
               text: 'Cobrar el importe total.',
               correct: false,
-              feedback: 'El cobro lo realiza el cliente después de la gestión de la tapa/llave.',
+              feedback: 'Aún no. El cliente realiza el pago después de que le devuelves la llave.',
             },
             {
               icon: <Droplet className="w-10 h-10" />,
-              text: 'Esperar Goteo antes de retirar la pistola.',
+              text: 'Esperar que termine el goteo antes de retirar la pistola.',
               correct: true,
-              feedback: '¡Correcto! Terminar Despacho / Espera Goteo es el paso inmediato.',
+              feedback: '¡Correcto! Es fundamental esperar el goteo para evitar derrames.',
             },
             {
               icon: <Key className="w-10 h-10" />,
               text: 'Colocar la tapa inmediatamente.',
               correct: false,
-              feedback: 'Primero debe esperar el goteo.',
+              feedback: 'Casi. Justo antes de poner la tapa, debes esperar el goteo.',
             },
           ],
           explanation:
-            'Según el flujograma, el Grifero debe esperar el goteo inmediatamente después de terminar el despacho.',
+            'Según el flujograma, tu acción inmediata tras finalizar la carga es esperar el goteo para asegurar que no se derrame combustible.',
         },
       },
       {
         type: 'drag-drop',
         content: {
-          question: 'Orden correcto del despacho según I-13-02:',
+          question: 'Ordena la secuencia correcta para despachar combustible (según I-13-02):',
           options: [
-            'Termina Despacho / Espera Goteo',
-            'Despacha Combustible y Vigila Derrames',
-            'Coloca Tapa / Devuelve Llave / Pregunta Comprobante',
+            'Terminar el despacho y esperar el goteo',
+            'Despachar combustible y vigilar derrames',
+            'Colocar la tapa, devolver la llave y preguntar por el comprobante',
           ],
           correctOrder: [
-            'Despacha Combustible y Vigila Derrames',
-            'Termina Despacho / Espera Goteo',
-            'Coloca Tapa / Devuelve Llave / Pregunta Comprobante',
+            'Despachar combustible y vigilar derrames',
+            'Terminar el despacho y esperar el goteo',
+            'Colocar la tapa, devolver la llave y preguntar por el comprobante',
           ],
-          win: '¡Conoces la secuencia perfecta para el despacho y cierre de carga!',
+          win: '¡Perfecto! Conoces la secuencia ideal para un despacho seguro y completo.',
         },
       },
       {
         type: 'flip-cards',
         content: {
           icon: <BookOpen className="w-16 h-16 mx-auto text-mainAutrisa" />,
-          intro: 'Buenas prácticas durante la carga:',
+          intro: 'Buenas prácticas que debes aplicar durante la carga:',
           cards: [
             {
               icon: <AlertTriangle className="w-12 h-12" />,
               title: 'Vigilar',
-              desc: 'Siempre Vigilar Derrames mientras se despacha el combustible.',
+              desc: 'Tu atención es clave: vigila siempre posibles derrames mientras despachas.',
             },
             {
               icon: <Droplet className="w-12 h-12" />,
               title: 'Goteo',
-              desc: 'Asegurar que no haya goteo de la pistola antes de guardarla.',
+              desc: 'Asegúrate de que la pistola no gotee antes de volver a colocarla en el surtidor.',
             },
             {
               icon: <FileText className="w-12 h-12" />,
               title: 'Comprobante',
-              desc: 'El Grifero debe Preguntar Comprobante (boleta/factura).',
+              desc: 'Es tu responsabilidad preguntar al cliente si necesitará boleta o factura.',
             },
           ],
-          tip: 'Voltea cada tarjeta para ver prácticas de seguridad y documentación.',
+          tip: 'Voltea cada tarjeta para repasar estas prácticas de seguridad y documentación.',
         },
       },
     ],
   },
   3: {
-    title: 'Cierre de Atención y Despedida (I-13-02)',
+    title: 'Paso 3: Cierre de la Atención y Despedida (I-13-02)',
     subSteps: [
       {
         type: 'visual-checklist',
         content: {
           icon: <Smile className="w-16 h-16 mx-auto text-mainAutrisa animate-bounce" />,
-          intro: 'Pasos finales del proceso I-13-02:',
+          intro: 'Estos son los pasos finales del proceso I-13-02:',
           items: [
-            { icon: <CreditCard className="w-12 h-12" />, text: 'Cliente Realiza el Pago.' },
-            { icon: <MessageCircle className="w-12 h-12" />, text: 'Grifero realiza la Despedida.' },
-            { icon: <ShieldCheck className="w-12 h-12" />, text: 'Cliente procede a la Salida del Grifo.' },
+            { icon: <CreditCard className="w-12 h-12" />, text: 'El cliente realiza el pago.' },
+            { icon: <MessageCircle className="w-12 h-12" />, text: 'Como Grifero, te despides amablemente.' },
+            { icon: <ShieldCheck className="w-12 h-12" />, text: 'El cliente se retira de la estación de servicio.' },
           ],
         },
       },
@@ -218,52 +236,53 @@ export const stepsData = {
         type: 'visual-quiz',
         content: {
           icon: <MessageCircle className="w-20 h-20 mx-auto text-mainAutrisa" />,
-          question: '¿Cuál es la frase de despedida estándar según el flujograma I-13-02?',
+          question: 'Según el flujograma I-13-02, ¿cuál es la frase exacta que debes usar para despedirte?',
           options: [
             {
               icon: <Sparkles className="w-10 h-10" />,
               text: 'Que tenga un buen día.',
               correct: false,
-              feedback: 'No es la frase textual documentada.',
+              feedback: 'Es una frase amable, pero no es la frase estándar del instructivo.',
             },
             {
               icon: <Smile className="w-10 h-10" />,
               text: 'Hasta luego, agradecemos su preferencia.',
               correct: true,
-              feedback: '¡Correcto! Es la despedida textual del proceso.',
+              feedback: '¡Correcto! Esta es la despedida oficial que debemos usar.',
             },
             {
               icon: <Users className="w-10 h-10" />,
               text: 'Vuelva pronto.',
               correct: false,
-              feedback: 'No es la frase textual documentada.',
+              feedback: 'Aunque es una buena intención, no es la frase estándar del instructivo.',
             },
           ],
-          explanation: 'La despedida textual en el flujograma es "Hasta luego, agradecemos su preferencia".',
+          explanation:
+            'El flujograma es claro: la despedida profesional estándar es "Hasta luego, agradecemos su preferencia".',
         },
       },
       {
         type: 'drag-drop',
         content: {
-          question: 'Orden correcto para terminar la atención:',
+          question: 'Ordena los pasos finales para terminar correctamente la atención:',
           options: [
-            'Despedida (Grifero)',
-            'Realiza el Pago (Cliente)',
-            'Coloca Tapa / Devuelve Llave / Pregunta Comprobante (Grifero)',
+            'Despedirte del cliente (Grifero)',
+            'El cliente realiza el pago (Cliente)',
+            'Colocar tapa, devolver llave y preguntar comprobante (Grifero)',
           ],
           correctOrder: [
-            'Coloca Tapa / Devuelve Llave / Pregunta Comprobante (Grifero)',
-            'Realiza el Pago (Cliente)',
-            'Despedida (Grifero)',
+            'Colocar tapa, devolver llave y preguntar comprobante (Grifero)',
+            'El cliente realiza el pago (Cliente)',
+            'Despedirte del cliente (Grifero)',
           ],
-          win: '¡Excelente! Sigues el protocolo correcto de cierre de la atención.',
+          win: '¡Excelente! Sigues el protocolo de cierre al pie de la letra.',
         },
       },
       {
         type: 'flip-cards',
         content: {
           icon: <BookOpen className="w-16 h-16 mx-auto text-mainAutrisa" />,
-          intro: 'Buenas prácticas al cerrar una atención:',
+          intro: 'Buenas prácticas para un cierre de atención profesional:',
           cards: [
             {
               icon: <FileText className="w-12 h-12" />,
@@ -278,10 +297,10 @@ export const stepsData = {
             {
               icon: <Target className="w-12 h-12" />,
               title: 'Meta',
-              desc: 'La meta es una "Salida del Grifo" fluida y la satisfacción del cliente.',
+              desc: 'Nuestra meta es que el cliente se vaya satisfecho y que su salida de la estación sea fluida y segura.',
             },
           ],
-          tip: 'Voltea las tarjetas para reforzar tus hábitos de cierre profesional.',
+          tip: 'Voltea las tarjetas para reforzar tus buenos hábitos de cierre.',
         },
       },
     ],

@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { Download } from 'lucide-react';
 import HeaderAustrisa from '../components/HeaderAustrisa';
 import HomeAustrisa from './HomeAustrisa';
+import { SlDocs } from 'react-icons/sl';
+import { MdOutlineMovie } from 'react-icons/md';
 
 export default function AboutPage() {
   const [showPDF, setShowPDF] = useState(false);
@@ -21,16 +23,18 @@ export default function AboutPage() {
 
           <div className="text-white lg:text-[18px] text-[15px] font-bold flex justify-center items-center gap-4 mt-4">
             <button
-              className="bg-mainAutrisa px-3 py-1 rounded-[8px] w-fit cursor-pointer hover:bg-mainAutrisa/90 transition-colors"
+              className="flex justify-center items-center gap-2 bg-mainAutrisa px-4 py-2 rounded-[8px] w-fit cursor-pointer hover:bg-mainAutrisa/90 transition-colors"
               onClick={() => setShowPDF(true)}
             >
-              Ver documentación
+              <SlDocs />
+              <span>Ver documentación</span>
             </button>
             <button
-              className="bg-mainAutrisa px-3 py-1 rounded-[8px] w-fit cursor-pointer hover:bg-mainAutrisa/90 transition-colors"
+              className="flex justify-center items-center gap-2 bg-mainAutrisa px-4 py-2 rounded-[8px] w-fit cursor-pointer hover:bg-mainAutrisa/90 transition-colors"
               onClick={() => setShowVideo(true)}
             >
-              Video
+              <MdOutlineMovie />
+              <span>Video</span>
             </button>
           </div>
 
