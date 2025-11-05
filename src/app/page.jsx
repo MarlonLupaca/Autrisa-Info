@@ -3,7 +3,7 @@ import MainHome from './components/MainHome';
 
 export default function Home() {
   return (
-    <div className="text-white">
+    <div>
       <HeaderAustrisa />
       <MainHome />
     </div>
