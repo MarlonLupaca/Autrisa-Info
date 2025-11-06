@@ -27,7 +27,7 @@ export default function AboutPage() {
               onClick={() => setShowPDF(true)}
             >
               <SlDocs />
-              <span>Ver documentación</span>
+              <span>Documentación</span>
             </button>
             <button
               className="flex justify-center items-center gap-2 bg-mainAutrisa px-4 py-2 rounded-[8px] w-fit cursor-pointer hover:bg-mainAutrisa/90 transition-colors"
@@ -95,7 +95,7 @@ export default function AboutPage() {
             {/* PDF Viewer */}
             <div className="flex-1 overflow-hidden">
               <iframe
-                src="/docs/Procesos_Identificados.pdf"
+                src="/docs/I-13-02-v01-PROCESO-DE-ATENCION-AL-CLIENTE.pdf"
                 className="w-full h-full rounded-b-lg"
                 title="Documento PDF"
               />

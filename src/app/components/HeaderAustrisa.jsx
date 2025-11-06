@@ -39,13 +39,18 @@ const HeaderAustrisa = () => {
     <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
       <div className="max-w-7xl mx-auto px-4 flex sm:px-6 h-20 lg:px-8">
         <div className="flex justify-between items-center w-full">
-          <div className="flex-shrink-0">
+          <a className="flex-shrink-0" href="/">
             <Image src="./logo-autrisa.svg" width={350} height={350} alt="Autrisa Logo" className="h-10 w-auto" />
-          </div>
+          </a>
           <nav className="hidden lg:flex items-center space-x-2">
             <a href="/">
               <button className="hover:bg-gray-500/10 rounded-xl cursor-pointer relative px-4 py-2 text-gray-700 font-bold text-[20px] transition-all duration-300 hover:text-mainAutrisa group flex items-center">
                 <span>Home</span>
+              </button>
+            </a>
+            <a href="/documentacion">
+              <button className="hover:bg-gray-500/10 rounded-xl cursor-pointer relative px-4 py-2 text-gray-700 font-bold text-[20px] transition-all duration-300 hover:text-mainAutrisa group flex items-center">
+                <span>Documentación</span>
               </button>
             </a>
             <div className="relative" ref={dropdownRef}>
@@ -122,6 +127,11 @@ const HeaderAustrisa = () => {
             <a href="/">
               <button className="hover:bg-gray-500/10 rounded-xl cursor-pointer relative px-4 py-2 text-gray-700 font-bold text-[20px] transition-all duration-300 hover:text-mainAutrisa group flex items-center w-full">
                 <span>Home</span>
+              </button>
+            </a>
+            <a href="/documentacion">
+              <button className="hover:bg-gray-500/10 rounded-xl cursor-pointer relative px-4 py-2 text-gray-700 font-bold text-[20px] transition-all duration-300 hover:text-mainAutrisa group flex items-center w-full">
+                <span>Documentación</span>
               </button>
             </a>
             <button
